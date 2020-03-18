@@ -1,18 +1,23 @@
 class User {
   id;
   name;
+  constructor() {
+    this.name = 'mikcel';
+  }
 }
 
-class Person extends User{}
+class Person extends User{
+  // declareを付けないと
+  //  Property 'name' will overwrite the base property in 'User'. If this is intentional, add an initializer. Otherwise, add a 'declare' modifier or remove the redundant declaration
+  declare name;
+}
 
-// [ 'id', 'name' ]
 let userKeys = Reflect.ownKeys(new User());
-console.log(userKeys);
+console.log(userKeys); // [ 'id', 'name' ]
 
-for (const key in userKeys) {
-  console.log(userKeys[key]);
-}
+const person = new Person();
+let personKeys = Reflect.ownKeys(person);
+console.log(personKeys); // [ 'id', 'name' ]
 
-let personKeys = Reflect.ownKeys(new Person());
-console.log(personKeys);
-
+person.name = "john";
+console.log(person.name); // john
