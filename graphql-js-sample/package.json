@@ -1,0 +1,22 @@
+{
+  "name": "graphql-js-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "graphql": "^14.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@types/node": "^13.9.0",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0"
+  }
+}
