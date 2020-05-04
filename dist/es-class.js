@@ -12,16 +12,16 @@ class User {
             writable: true,
             value: void 0
         });
+        this.name = 'mikcel';
     }
 }
 class Person extends User {
 }
-// [ 'id', 'name' ]
 let userKeys = Reflect.ownKeys(new User());
-console.log(userKeys);
-for (const key in userKeys) {
-    console.log(userKeys[key]);
-}
-let personKeys = Reflect.ownKeys(new Person());
-console.log(personKeys);
+console.log(userKeys); // [ 'id', 'name' ]
+const person = new Person();
+let personKeys = Reflect.ownKeys(person);
+console.log(personKeys); // [ 'id', 'name' ]
+person.name = "john";
+console.log(person.name); // john
 //# sourceMappingURL=es-class.js.map
