@@ -7,6 +7,7 @@ class User {
   @Expose() firstName: string;
   @Expose() lastName: string;
   @Expose() age: number;
+  code: number = 3;
 }
 
 const userJson = [
