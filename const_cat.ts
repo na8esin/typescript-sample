@@ -6,7 +6,7 @@ class Author {
   private readonly id: number;
   private readonly name: string;
   // コンストラクタで受け取るときに分割代入しちゃう
-  constructor({id, name}) {
+  constructor({ id, name }) {
     this.id = id;
     this.name = name;
   }
@@ -17,7 +17,7 @@ const data = {
   birthday: '2020'
 }
 
-const author : IAuthor = data;
+const author: IAuthor = data;
 // { id: 2, name: 'mackel', birthday: '2020' }
 console.log(author);
 
@@ -29,3 +29,5 @@ let author3 = new Author(data);
 console.log(author3);
 
 // TODO: object.keysをfilterするみたいなことできる？
+
+export { }
