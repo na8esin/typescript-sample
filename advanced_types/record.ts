@@ -1,5 +1,7 @@
 class Vo {
-  constructor(readonly v: Record<string, boolean>) { }
+  constructor(
+    // keyの型がnumberだろうとエラーが出ない
+    readonly v: Record<string, boolean>) { }
   print() {
     Object.entries(this.v).forEach(([key, value]) => {
       console.log(key, value);
@@ -7,6 +9,7 @@ class Vo {
   }
 }
 
+// keyに関してはある程度許容される
 const data = {
   aaaa: true,
   bbbb: false,
