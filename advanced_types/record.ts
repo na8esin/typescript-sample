@@ -1,6 +1,7 @@
 class Vo {
   constructor(
     // keyの型がnumberだろうとエラーが出ない
+    // string | number | symbol,なら大丈夫らしい
     readonly v: Record<string, boolean>) { }
   print() {
     Object.entries(this.v).forEach(([key, value]) => {
@@ -18,3 +19,7 @@ const data = {
 };
 
 new Vo(data).print();
+
+// こういういっぺんに投入するときに矛盾があると怒られる
+const list = [{ dddd: false }, { cccc: true }];
+list.map(e => new Vo(e).print());
