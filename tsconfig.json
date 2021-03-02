@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2017",
     "module": "commonjs",
-    "outDir": "dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "outDir": "dist",
     "sourceMap": true,
-    "useDefineForClassFields": true,
     "strict": true,
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "useDefineForClassFields": true,
+    "target": "es2017"
   },
   "exclude": [
     "dist"
