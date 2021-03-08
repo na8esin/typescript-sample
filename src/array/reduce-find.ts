@@ -1,5 +1,7 @@
 import * as chai from 'chai';
 
+function main() { }
+
 class IdPoint {
   id: String;
   point: number;

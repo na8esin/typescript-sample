@@ -9,9 +9,6 @@
     "useDefineForClassFields": true,
     "target": "es2017"
   },
-  "exclude": [
-    "dist"
-  ],
   "include": [
     "src"
   ]
