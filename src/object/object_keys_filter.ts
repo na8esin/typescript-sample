@@ -1,6 +1,6 @@
 class Anchor {
-  id: number;
-  name: string;
+  id?: number;
+  name?: string;
 }
 
 const data = {
@@ -18,6 +18,8 @@ console.log(Object.entries(anchor)); // []
 
 // nullで初期化したら？ → OK
 const anchor2 = new Anchor();
-anchor2.id = null;
-anchor2.name = null;
+anchor2.id = undefined;
+anchor2.name = undefined;
 console.log(Object.keys(anchor2)); //[ 'id', 'name' ]
+
+export { };
