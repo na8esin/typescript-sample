@@ -25,7 +25,7 @@ function mergeDtoWithFirestoreRecord(dto: DTOHasAnyType, firestoreObject: any) {
     });
 }
 
-// リフレクションで解決してみる
+// リフレクションで解決してみる。どっちにしても一時しのぎという前提
 function reflectiton(dto: DTO, firestoreObject: any) {
     Object.keys(firestoreObject).map((key: string) => {
         const name = Reflect.get(dto, key);
